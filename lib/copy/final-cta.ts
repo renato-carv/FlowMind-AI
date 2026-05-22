@@ -7,8 +7,4 @@ export const finalCta = {
     href: "mailto:contato@flowmind.ai?subject=Quero%20uma%20demo%20do%20FlowMind%20AI",
     label: "Agendar demonstração",
   },
-  secondaryCta: {
-    href: "mailto:contato@flowmind.ai?subject=Tenho%20uma%20pergunta",
-    label: "Tenho uma pergunta",
-  },
 } as const;
