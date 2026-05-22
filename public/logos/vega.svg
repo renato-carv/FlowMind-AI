@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 28" fill="none" role="img" aria-label="Vega Health">
+  <g fill="currentColor">
+    <path d="M4 7h2.6l3 9 3-9H15l-4.4 13H8.4L4 7z"/>
+    <path d="M18 14a4.5 4.5 0 119 0v.5h-7c.2 1.6 1.4 2.6 3 2.6 1 0 1.9-.4 2.5-1.1l1.3 1.2A4.5 4.5 0 0118 14zm2-1h5a2.5 2.5 0 00-5 0z"/>
+  </g>
+  <text x="32" y="18" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="0.02em" fill="currentColor">Vega<tspan font-weight="400" dx="2">Health</tspan></text>
+</svg>

@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/ui/reveal";
 import { Container } from "@/components/ui/container";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { benefits } from "@/lib/copy/benefits";
@@ -12,9 +13,11 @@ export function Benefits() {
           description={benefits.subheadline}
         />
         <ul role="list" className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.items.map(({ icon: Icon, title, description }) => (
-            <li
+          {benefits.items.map(({ icon: Icon, title, description }, idx) => (
+            <Reveal
+              as="li"
               key={title}
+              delay={idx * 60}
               className="group border-border/60 bg-surface/60 hover:border-border relative overflow-hidden rounded-[var(--radius-lg)] border p-6 transition-colors"
             >
               <div
@@ -29,7 +32,7 @@ export function Benefits() {
               </div>
               <h3 className="text-fg text-base font-semibold">{title}</h3>
               <p className="text-fg-muted mt-2 text-sm text-pretty">{description}</p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </Container>
