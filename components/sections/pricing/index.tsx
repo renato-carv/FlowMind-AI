@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section, SectionHeader } from "@/components/ui/section";
@@ -15,33 +16,37 @@ export function Pricing() {
           description={pricing.subheadline}
         />
 
-        <ul role="list" className="mt-14 grid gap-6 md:grid-cols-3">
-          {pricing.plans.map((plan) => (
-            <li
+        <ul role="list" className="mt-16 grid items-stretch gap-6 md:grid-cols-3 md:gap-5 lg:gap-6">
+          {pricing.plans.map((plan, idx) => (
+            <Reveal
+              as="li"
               key={plan.id}
+              delay={idx * 80}
               className={cn(
-                "bg-surface/60 relative flex flex-col gap-6 rounded-[var(--radius-lg)] border p-8",
+                "relative flex h-full flex-col gap-6 rounded-[var(--radius-lg)] border p-8 transition-colors",
                 plan.featured
-                  ? "border-accent/40 shadow-lifted md:-translate-y-2"
-                  : "border-border/60",
+                  ? "border-accent/60 bg-surface shadow-lifted z-10 md:-translate-y-3"
+                  : "border-border/60 bg-surface/50 hover:border-border",
               )}
             >
               {plan.featured ? (
-                <span
-                  aria-hidden
-                  className="via-accent absolute inset-x-0 -top-px mx-auto h-px w-2/3 bg-gradient-to-r from-transparent to-transparent"
-                />
-              ) : null}
-              {plan.featured ? (
-                <span className="bg-accent/15 text-accent ring-accent/30 absolute top-4 right-4 rounded-full px-2.5 py-0.5 text-[11px] font-medium ring-1">
-                  Recomendado
-                </span>
+                <>
+                  <span
+                    aria-hidden
+                    className="from-accent/0 via-accent to-accent/0 absolute inset-x-8 -top-px h-px bg-gradient-to-r"
+                  />
+                  <span className="bg-accent-warm text-accent-warm-fg shadow-soft absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide uppercase">
+                    Mais popular
+                  </span>
+                </>
               ) : null}
 
               <div>
-                <div className="text-fg-muted text-xs tracking-wider uppercase">{plan.name}</div>
+                <div className="text-fg-muted text-xs font-medium tracking-wider uppercase">
+                  {plan.name}
+                </div>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-fg text-3xl font-semibold tracking-tight">
+                  <span className="text-fg text-4xl font-semibold tracking-tight">
                     {plan.price}
                   </span>
                   <span className="text-fg-muted text-sm">/{plan.cadence}</span>
@@ -52,21 +57,27 @@ export function Pricing() {
               <Button
                 href={plan.ctaHref}
                 size="md"
-                variant={plan.featured ? "primary" : "secondary"}
+                variant={plan.featured ? "primary" : "ghost"}
                 className="w-full justify-center"
               >
                 {plan.ctaLabel}
               </Button>
 
-              <ul role="list" className="border-border/60 flex flex-col gap-2.5 border-t pt-5">
+              <ul role="list" className="border-border/60 flex flex-col gap-3 border-t pt-6">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="text-fg flex items-start gap-2.5 text-sm">
-                    <Check className="text-accent mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+                  <li key={feature} className="flex items-start gap-2.5 text-sm">
+                    <Check
+                      className={cn(
+                        "mt-0.5 h-4 w-4 shrink-0",
+                        plan.featured ? "text-accent" : "text-fg-muted",
+                      )}
+                      aria-hidden
+                    />
                     <span className="text-fg-muted">{feature}</span>
                   </li>
                 ))}
               </ul>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </Container>

@@ -1,10 +1,13 @@
-import { Bot, GitBranch, Layers, ShieldCheck, Sparkles, Workflow } from "lucide-react";
+import { Bot, GitBranch, Layers, ShieldCheck, Workflow } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+
+export type BenefitSize = "lg" | "sm";
 
 export type Benefit = {
   icon: LucideIcon;
   title: string;
   description: string;
+  size: BenefitSize;
 };
 
 export const benefits = {
@@ -17,37 +20,33 @@ export const benefits = {
       icon: Workflow,
       title: "Orquestração end-to-end",
       description:
-        "Conecte gatilhos, modelos, ferramentas e humanos em fluxos versionados, com replay e ramificações condicionais.",
+        "Conecte gatilhos, modelos, ferramentas e humanos em fluxos versionados, com replay e ramificações condicionais. Sem código quebrado em produção e sem caixa-preta no meio do caminho.",
+      size: "lg",
+    },
+    {
+      icon: Layers,
+      title: "Integrações nativas",
+      description: "100+ conectores prontos para SaaS, bancos, filas e modelos. SDK aberto.",
+      size: "sm",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Governança séria",
+      description: "Auditoria, SSO, RBAC e isolamento por workspace. Pronto para compliance.",
+      size: "sm",
     },
     {
       icon: Bot,
       title: "Agentes inteligentes",
       description:
-        "Crie agentes especialistas com ferramentas próprias, memória persistente e políticas de aprovação configuráveis.",
-    },
-    {
-      icon: Layers,
-      title: "Integrações nativas",
-      description:
-        "100+ conectores prontos para SaaS, bancos, filas e modelos de IA. Webhooks e SDK aberto para o que faltar.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Governança séria",
-      description:
-        "Trilhas de auditoria, SSO, RBAC granular e isolamento por workspace. Pronto para auditorias e compliance.",
-    },
-    {
-      icon: Sparkles,
-      title: "Produtividade composta",
-      description:
-        "Templates, blocos reutilizáveis e geração assistida transformam horas de configuração em minutos.",
+        "Especialistas com ferramentas próprias, memória persistente e políticas de aprovação configuráveis no mesmo fluxo.",
+      size: "lg",
     },
     {
       icon: GitBranch,
       title: "Versionamento como código",
-      description:
-        "Branches, revisões e ambientes (dev, stage, prod) com promoção controlada. Reverta um deploy ruim em um clique.",
+      description: "Branches, ambientes dev/stage/prod e rollback em um clique.",
+      size: "sm",
     },
   ] satisfies Benefit[],
 } as const;
