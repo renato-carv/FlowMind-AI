@@ -27,21 +27,22 @@ export const footer = {
       ],
     },
     {
-      title: "Empresa",
+      title: "Recursos",
       links: [
         { href: "mailto:contato@flowmind.ai", label: "Fale com a gente" },
-        { href: "mailto:imprensa@flowmind.ai", label: "Imprensa" },
-        { href: "mailto:juridico@flowmind.ai", label: "Jurídico" },
+        { href: "#", label: "Status" },
+        { href: "#", label: "Segurança" },
       ],
     },
     {
-      title: "Recursos",
+      title: "Legal",
       links: [
-        { href: "#", label: "Status" },
-        { href: "#", label: "Segurança" },
         { href: "#", label: "Política de privacidade" },
+        { href: "#", label: "Termos de uso" },
+        { href: "mailto:juridico@flowmind.ai", label: "LGPD / DPA" },
       ],
     },
   ],
   legal: "© 2026 FlowMind AI. Todos os direitos reservados.",
+  location: "São Paulo · Brasil",
 } as const;
