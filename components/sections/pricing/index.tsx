@@ -16,10 +16,7 @@ export function Pricing() {
           description={pricing.subheadline}
         />
 
-        <ul
-          role="list"
-          className="mt-16 grid items-stretch gap-6 md:grid-cols-3 md:gap-5 lg:gap-6"
-        >
+        <ul role="list" className="mt-16 grid items-stretch gap-6 md:grid-cols-3 md:gap-5 lg:gap-6">
           {pricing.plans.map((plan, idx) => (
             <Reveal
               as="li"

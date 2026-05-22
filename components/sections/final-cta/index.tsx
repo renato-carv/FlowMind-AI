@@ -15,7 +15,9 @@ export function FinalCta() {
       <div
         aria-hidden
         className="bg-grid absolute inset-0 -z-10 opacity-40"
-        style={{ maskImage: "radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 80%)" }}
+        style={{
+          maskImage: "radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 80%)",
+        }}
       />
       <div
         aria-hidden

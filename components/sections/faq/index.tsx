@@ -15,7 +15,7 @@ export function Faq() {
           <Accordion.Root
             type="single"
             collapsible
-            className="divide-[hsl(var(--border-subtle))] divide-y"
+            className="divide-y divide-[hsl(var(--border-subtle))]"
           >
             {faq.items.map((item, idx) => (
               <Accordion.Item key={item.question} value={`item-${idx}`} className="group">
