@@ -25,7 +25,7 @@ export function Testimonials() {
               <div className="border-border/60 mt-auto flex items-center gap-3 border-t pt-4">
                 <span
                   aria-hidden
-                  className="from-accent/40 to-glow/40 text-fg ring-border grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br text-xs font-semibold ring-1"
+                  className="from-accent/40 to-accent-warm/40 text-fg ring-border grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br text-xs font-semibold ring-1"
                 >
                   {item.initials}
                 </span>

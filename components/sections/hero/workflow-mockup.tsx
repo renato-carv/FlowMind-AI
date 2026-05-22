@@ -12,9 +12,9 @@ const iconByRole: Record<string, LucideIcon> = {
 };
 
 const tintByRole: Record<string, string> = {
-  trigger: "text-glow",
+  trigger: "text-accent-warm",
   agent: "text-accent",
-  model: "text-glow",
+  model: "text-accent-warm",
   human: "text-fg",
   action: "text-accent",
 };
