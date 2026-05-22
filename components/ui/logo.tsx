@@ -10,7 +10,7 @@ export function Logo({ className, withWordmark = true }: LogoProps) {
     <span className={cn("text-fg inline-flex items-center gap-2", className)}>
       <span
         aria-hidden
-        className="from-accent to-glow text-accent-fg shadow-soft relative grid h-7 w-7 place-items-center rounded-[8px] bg-gradient-to-br"
+        className="from-accent to-accent-warm text-accent-fg shadow-soft relative grid h-7 w-7 place-items-center rounded-[8px] bg-gradient-to-br"
       >
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4">
           <path

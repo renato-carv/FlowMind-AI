@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" fill="none" role="img" aria-label="Orbit Retail">
+  <g stroke="currentColor" stroke-width="1.6" fill="none">
+    <ellipse cx="14" cy="14" rx="9" ry="4" transform="rotate(-20 14 14)"/>
+    <circle cx="14" cy="14" r="2.4" fill="currentColor" stroke="none"/>
+  </g>
+  <text x="30" y="18" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" letter-spacing="0.04em" fill="currentColor">orbit<tspan font-weight="400" dx="2">retail</tspan></text>
+</svg>
