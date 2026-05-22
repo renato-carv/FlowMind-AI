@@ -70,7 +70,15 @@ CI must run all four. A PR with any of these red is auto-rejected.
 - Best Practices ≥ 95
 - SEO ≥ 95
 
-Run locally with `pnpm lighthouse` (script wired to `lhci autorun`) and attach the report to the PR.
+**Onde rodar:** localmente, em build de produção (`pnpm build && pnpm start`), via `pnpm lighthouse` (wired to `lhci autorun`). Os asserts em `lighthouserc.json` falham se algum score ficar abaixo do budget.
+
+**Por que não em CI (decisão FUL-16):** o runner GitHub-hosted é CPU-throttled e produz Performance ~0.65 em build limpa, contra 0.99 desktop / 1.00 mobile localmente — sinal puramente ruidoso. O gate automático contra **Preview URL** (Vercel ou Cloudflare Pages) está planejado e será reintroduzido na child issue de provisionamento ([FUL-18](/FUL/issues/FUL-18)); enquanto a infra não existir, o gate é manual via PR evidence.
+
+**Evidência obrigatória no PR (substitui o gate de CI):**
+
+- Output do `pnpm lighthouse` (resumo de assertions do `lhci autorun`) colado no corpo do PR.
+- Tabela de scores numéricos (Performance, Accessibility, Best Practices, SEO) para desktop **e** mobile do `/`.
+- PRs sem essa evidência são rejeitados pelo CTO (§10.2).
 
 ### Bundle budget
 
